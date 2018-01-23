@@ -37,7 +37,6 @@ class ViewController: UIViewController {
     
     func getShade(color: String) -> UIColor {
         let hue = CGFloat(Float(getRandomInt(mn: (colorRanges[color]?.0)!, mx: (colorRanges[color]?.1)!)) / 360.0)
-        hueValueLabel.text = "\(hue)"
         
         return UIColor(hue: hue, saturation: 0.66, brightness: 0.66, alpha: 1.0)
     }
