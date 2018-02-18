@@ -18,41 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xT-7w-9Fa">
-                                <rect key="frame" x="77" y="157" width="220" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Switch Background Color"/>
-                                <connections>
-                                    <action selector="switchColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zIJ-s6-b6B"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ib-udw">
-                                <rect key="frame" x="150" y="318" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Red Colors"/>
-                                <connections>
-                                    <action selector="switchRedColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vc8-4d-GMm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dN-Zi-dMa">
-                                <rect key="frame" x="142" y="382" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Green Colors"/>
-                                <connections>
-                                    <action selector="switchGreenColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="715-YE-Vj5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQa-pM-1X3">
-                                <rect key="frame" x="148" y="439" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Blue Colors"/>
-                                <connections>
-                                    <action selector="switchBlueColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xzn-6b-Q9F"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bps-Hc-wi9">
+                                <rect key="frame" x="77" y="280.5" width="220" height="126"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xT-7w-9Fa">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Switch Background Color"/>
+                                        <connections>
+                                            <action selector="switchColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zIJ-s6-b6B"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2gq-Cq-NXV">
+                                        <rect key="frame" x="65" y="36" width="90" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ib-udw">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Red Colors"/>
+                                                <connections>
+                                                    <action selector="switchRedColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vc8-4d-GMm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dN-Zi-dMa">
+                                                <rect key="frame" x="0.0" y="30" width="90" height="30"/>
+                                                <state key="normal" title="Green Colors"/>
+                                                <connections>
+                                                    <action selector="switchGreenColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="715-YE-Vj5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQa-pM-1X3">
+                                                <rect key="frame" x="0.0" y="60" width="90" height="30"/>
+                                                <state key="normal" title="Blue Colors"/>
+                                                <connections>
+                                                    <action selector="switchBlueColorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xzn-6b-Q9F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bps-Hc-wi9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cgF-Cl-oPh"/>
+                            <constraint firstItem="Bps-Hc-wi9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fja-SZ-hxQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
