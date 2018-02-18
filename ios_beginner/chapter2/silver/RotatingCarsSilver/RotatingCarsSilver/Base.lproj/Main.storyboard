@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RotatingCarsSilver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ayT-zo-mTB">
+                                <rect key="frame" x="50" y="95" width="275" height="458"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-1" translatesAutoresizingMaskIntoConstraints="NO" id="pVZ-Dt-zos">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-2" translatesAutoresizingMaskIntoConstraints="NO" id="tG3-go-2yL">
+                                        <rect key="frame" x="0.0" y="117" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-3" translatesAutoresizingMaskIntoConstraints="NO" id="j32-Xc-C1b">
+                                        <rect key="frame" x="0.0" y="234" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ftr-jh-wGz">
+                                        <rect key="frame" x="0.0" y="351" width="275" height="107"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-bu-hEm">
+                                <rect key="frame" x="67.5" y="603" width="240" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-0F-rTo">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
+                                        <color key="backgroundColor" red="0.43137254901960786" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onRotateUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YRV-lQ-OuB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSn-Hs-MLA">
+                                        <rect key="frame" x="145" y="0.0" width="95" height="50"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Down">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onRotateDownButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzC-Gg-MGX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xwv-zN-20g"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="rhf-df-Xvf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ayT-zo-mTB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5q9-aY-rWP"/>
+                            <constraint firstItem="ayT-zo-mTB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="748-ew-L01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayT-zo-mTB" secondAttribute="trailing" constant="50" id="Mmp-Ok-vt3"/>
+                            <constraint firstItem="WuQ-bu-hEm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Njc-kQ-B09"/>
+                            <constraint firstItem="WuQ-bu-hEm" firstAttribute="top" secondItem="ayT-zo-mTB" secondAttribute="bottom" constant="50" id="PhX-y0-Flk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="pVZ-Dt-zos" id="lMR-3c-RWB"/>
+                        <outlet property="fourthImageView" destination="Ftr-jh-wGz" id="3JU-eG-J6n"/>
+                        <outlet property="rotateDownButton" destination="kSn-Hs-MLA" id="3GU-7u-A9M"/>
+                        <outlet property="rotateUpButton" destination="Rad-0F-rTo" id="7gy-la-8q0"/>
+                        <outlet property="secondImageView" destination="tG3-go-2yL" id="vJS-xr-bJ8"/>
+                        <outlet property="thirdImageView" destination="j32-Xc-C1b" id="7K7-A8-F9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car-1" width="136" height="52"/>
+        <image name="car-2" width="150" height="107"/>
+        <image name="car-3" width="116" height="69"/>
+        <image name="car-4" width="151" height="86"/>
+    </resources>
+</document>

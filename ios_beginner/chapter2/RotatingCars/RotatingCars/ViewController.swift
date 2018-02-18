@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topImageView: UIImageView!
+    @IBOutlet weak var middleImageView: UIImageView!
+    @IBOutlet weak var bottomImageView: UIImageView!
+    @IBOutlet weak var rotateCarsButton: UIButton!
+    @IBAction func onRotateCarsButtonPressed(_ sender: Any) {
+        let topImage = topImageView.image
+        
+        topImageView.image = middleImageView.image
+        middleImageView.image = bottomImageView.image
+        bottomImageView.image = topImage
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        rotateCarsButton.layer.cornerRadius = 30
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

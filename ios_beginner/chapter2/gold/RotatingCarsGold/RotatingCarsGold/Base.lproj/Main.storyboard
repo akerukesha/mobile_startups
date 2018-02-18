@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RotatingCarsGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-uS-4PE">
+                                <rect key="frame" x="50" y="70" width="275" height="458"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-1" translatesAutoresizingMaskIntoConstraints="NO" id="3MS-Ku-Mzz">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-2" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-OO-JEq">
+                                        <rect key="frame" x="0.0" y="117" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-3" translatesAutoresizingMaskIntoConstraints="NO" id="acn-Rw-KoZ">
+                                        <rect key="frame" x="0.0" y="234" width="275" height="107"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-4" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-ub-RcZ">
+                                        <rect key="frame" x="0.0" y="351" width="275" height="107"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="acX-4e-9Hl">
+                                <rect key="frame" x="26.5" y="553" width="322" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-01-ym5">
+                                        <rect key="frame" x="1" y="0.0" width="320" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current interval: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnC-Lm-FhQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="IvC-Gn-U2Q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current direction: Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-5Z-9Pp">
+                                                <rect key="frame" x="170" y="0.0" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="yoh-5j-rg5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-bt-NjN">
+                                        <rect key="frame" x="0.0" y="40" width="322" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-bp-dZO">
+                                                <rect key="frame" x="0.0" y="6" width="94" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-jm-cSu">
+                                                <rect key="frame" x="114" y="0.5" width="94" height="29"/>
+                                                <color key="tintColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="o9u-Ov-Xwo"/>
+                                                </connections>
+                                            </stepper>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q14-bo-mkq">
+                                                <rect key="frame" x="228" y="1" width="94" height="29"/>
+                                                <segments>
+                                                    <segment title="Up"/>
+                                                    <segment title="Down"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.43137254899999999" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-Mk-xon">
+                                        <rect key="frame" x="111" y="80" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.43137254901960786" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6Ss-GU-4TX"/>
+                                        </constraints>
+                                        <state key="normal" title="Apply">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="applyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yos-7T-UiJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GIw-uS-4PE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="J6J-gb-VrF"/>
+                            <constraint firstItem="GIw-uS-4PE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Jb5-gN-CZT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GIw-uS-4PE" secondAttribute="trailing" constant="50" id="PZD-K5-NhN"/>
+                            <constraint firstItem="acX-4e-9Hl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="baD-CI-C8v"/>
+                            <constraint firstItem="acX-4e-9Hl" firstAttribute="top" secondItem="GIw-uS-4PE" secondAttribute="bottom" constant="25" id="v48-Gb-mx5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="applyButton" destination="YY3-Mk-xon" id="XJ5-JL-NFf"/>
+                        <outlet property="currentDirectionLabel" destination="gpb-5Z-9Pp" id="QRV-Gj-yPv"/>
+                        <outlet property="currentIntervalLabel" destination="gnC-Lm-FhQ" id="KPb-su-d3C"/>
+                        <outlet property="firstImageView" destination="3MS-Ku-Mzz" id="zc3-at-UlC"/>
+                        <outlet property="fourthImageView" destination="zWk-ub-RcZ" id="iOb-fk-58K"/>
+                        <outlet property="intervalLabel" destination="5qu-bp-dZO" id="f94-0g-oTi"/>
+                        <outlet property="secondImageView" destination="cVu-OO-JEq" id="2SC-ta-6Wr"/>
+                        <outlet property="segmentedControl" destination="q14-bo-mkq" id="7do-cX-gmY"/>
+                        <outlet property="stepper" destination="Pl4-jm-cSu" id="lqj-WP-HOg"/>
+                        <outlet property="thirdImageView" destination="acn-Rw-KoZ" id="Kim-hm-CRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car-1" width="136" height="52"/>
+        <image name="car-2" width="150" height="107"/>
+        <image name="car-3" width="116" height="69"/>
+        <image name="car-4" width="151" height="86"/>
+    </resources>
+</document>
