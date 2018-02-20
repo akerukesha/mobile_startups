@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Taro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моя будущая профессия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRg-z6-9kW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="73W-cu-K3g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb5-VV-0xK">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="СТАРТ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flK-Bn-cPK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4VW-qu-SNx">
+                                <rect key="frame" x="0.0" y="268.5" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bE2-Hc-8aw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jRg-z6-9kW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MDJ-Jc-JD8"/>
+                            <constraint firstItem="4VW-qu-SNx" firstAttribute="trailing" secondItem="jRg-z6-9kW" secondAttribute="trailing" id="TaY-wX-7TC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jRg-z6-9kW" secondAttribute="trailing" id="VB3-Ga-1DU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wb5-VV-0xK" secondAttribute="bottom" id="XDl-NZ-0e2"/>
+                            <constraint firstItem="jRg-z6-9kW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XXB-bh-Nm6"/>
+                            <constraint firstItem="4VW-qu-SNx" firstAttribute="leading" secondItem="jRg-z6-9kW" secondAttribute="leading" id="Y0W-Ls-Ohs"/>
+                            <constraint firstItem="4VW-qu-SNx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="YKx-HJ-g5X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wb5-VV-0xK" secondAttribute="trailing" id="ZfR-QX-soh"/>
+                            <constraint firstItem="Wb5-VV-0xK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lGh-f4-yKi"/>
+                            <constraint firstItem="Wb5-VV-0xK" firstAttribute="height" secondItem="jRg-z6-9kW" secondAttribute="height" id="ooB-7c-usF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="optionImageView" destination="4VW-qu-SNx" id="j01-76-cbQ"/>
+                        <outlet property="startPauseButton" destination="Wb5-VV-0xK" id="sld-7k-n6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
