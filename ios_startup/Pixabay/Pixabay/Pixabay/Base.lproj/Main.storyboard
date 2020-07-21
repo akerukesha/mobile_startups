@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iha-PA-ElL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pixabay-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pixabay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sAI-yK-iaD">
+                                <rect key="frame" x="5" y="325.5" width="365" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU9-Pt-avv">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="80"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" red="0.47843137254901957" green="0.53725490196078429" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gaS-ln-56C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl6-bf-Wjq">
+                                        <rect key="frame" x="185" y="0.0" width="180" height="80"/>
+                                        <state key="normal" title="Favorites">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.53725490200000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="favoritesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8Q-J5-Jb3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cE9-ia-KaR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sAI-yK-iaD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="OhZ-ID-gvJ"/>
+                            <constraint firstItem="sAI-yK-iaD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="S4v-t2-mp7"/>
+                            <constraint firstItem="sAI-yK-iaD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nh1-cm-Pwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sAI-yK-iaD" secondAttribute="trailing" constant="5" id="p7d-qN-7Ht"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pixabay" id="ibO-zp-Eg2"/>
+                    <connections>
+                        <outlet property="favoritesButton" destination="bl6-bf-Wjq" id="9ER-Cv-NRz"/>
+                        <outlet property="searchButton" destination="gU9-Pt-avv" id="VrP-ND-cnl"/>
+                        <segue destination="iqM-Ku-TjV" kind="show" identifier="ShowMediaList" id="PAe-u4-g0s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Media List View Controller-->
+        <scene sceneID="3nt-UV-dH2">
+            <objects>
+                <viewController id="iqM-Ku-TjV" customClass="MediaListViewController" customModule="Pixabay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6aG-pr-hAY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="N9C-hk-mVw">
+                                <rect key="frame" x="5" y="587" width="365" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-dv-Qmm">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="80"/>
+                                        <state key="normal" title="Images">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.53725490200000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imagesButtonPressed:" destination="iqM-Ku-TjV" eventType="touchUpInside" id="w2p-lc-wOf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-yq-wGo">
+                                        <rect key="frame" x="185" y="0.0" width="180" height="80"/>
+                                        <state key="normal" title="Videos">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.53725490200000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="videosButtonPressed:" destination="iqM-Ku-TjV" eventType="touchUpInside" id="aPy-ZN-S1x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DZ0-Dh-0rm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9rf-XN-vGG" firstAttribute="bottom" secondItem="N9C-hk-mVw" secondAttribute="bottom" id="2vq-7D-y9S"/>
+                            <constraint firstItem="N9C-hk-mVw" firstAttribute="leading" secondItem="9rf-XN-vGG" secondAttribute="leading" constant="5" id="fv4-uZ-rnx"/>
+                            <constraint firstItem="9rf-XN-vGG" firstAttribute="trailing" secondItem="N9C-hk-mVw" secondAttribute="trailing" constant="5" id="jw5-Wz-NgE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9rf-XN-vGG"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagesButton" destination="PQt-dv-Qmm" id="eN6-29-v4U"/>
+                        <outlet property="videosButton" destination="uYS-yq-wGo" id="L4w-mZ-sYf"/>
+                        <segue destination="njB-f5-NUJ" kind="show" identifier="ShowMediaInfo" id="Hx7-NU-wli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8B-6B-k7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="134"/>
+        </scene>
+        <!--Media Info View Controller-->
+        <scene sceneID="Lmf-jJ-src">
+            <objects>
+                <viewController id="njB-f5-NUJ" customClass="MediaInfoViewController" customModule="Pixabay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w1a-cl-IqW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="D9w-wu-e4Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-Ke-HNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dYB-EA-qLX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iha-PA-ElL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7fU-EY-owM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XfK-70-fBF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3y-mX-Qb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="134"/>
+        </scene>
+    </scenes>
+</document>
